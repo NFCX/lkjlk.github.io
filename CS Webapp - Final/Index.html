@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#00BFFF"/>
+	<title>Task List 2021</title>
+	<link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" href="/css/styles.css" rel="stylesheet">
+	<script type="text/javascript" src="/js/materialize.min.js"></script>
+	<link rel="Manifest" href="/manifest.json">
+	<link rel="apple-touch-icon" href="/icons/icon-96x96.png">
+	<meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+
+	<link rel="stylesheet" href="/css/index.css" />
+
+</head>
+
+	<nav class="z-depth-0">
+	<div class="nav-wrapper container">
+		<a href="/"><img src="https://lh3.googleusercontent.com/MhJF_WilN-BxxNNjuIcoAylKft3pP280QxBtcNcFK9G5SaG5eMp4-k6kBo_hLK2Ecdk0KNHEEIPeexOQoZPdLnaq1Nay_IE0iXpuCjJwRse95YByITuwtfxOaNAffmIA0wpZLf72CA=w2400"  width="120" height="70"></a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li class="logged-in" style="display:none;">
+				<a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+			</li>
+			<li class="logged-out" style="display:none;">
+				<a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+			</li>
+			<li class="logged-out" style="display:none;">
+				<a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+			</li>
+			<li class="logged-in" style="display:none;">
+				<a href="#" class="grey-text" id="logout">Logout</a>
+			</li>
+			<li class="logged-in">
+				<span class="right grey-text text-darken-1">
+				<i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+			</span>
+		</li>
+		</ul>
+		</div>
+	</nav>
+
+	<ul id="side-menu" class="sidenav side-menu">
+		<li><a class="subheader">DOIT</a></li>
+		<li><a href="/" class="waves-effect">
+			<i class="material-icons">home</i>Home</a></li>
+		<li><a href="/pages/todolist.html" class="waves-effect">
+			<i class="material-icons">check_circle</i>ToDoList</a></li>
+		<li><a href="/pages/pomodoro.html" class="waves-effect">
+			<i class="material-icons">access_time</i>Pomodoro</a></li>
+		<li><a href="/pages/calendar.html" class="waves-effect">
+            <i class="material-icons">date_range</i>Calendar</a></li>
+		<li><div class="divider"></div></li>
+		<li><a href="/pages/about.html" class="waves-effect">
+			<i class="material-icons">contacts</i>About</a></li>
+		<li><a href="/pages/contact.html" class="waves-effect">
+			<i class="material-icons">mail_outline</i>Contact</a></li>
+		<li><a href="/pages/T&C.html" class="waves-effect">
+			<i class="material-icons">assignment</i>Terms & Conditions</a></li>
+	</ul>
+
+	<div id="modal-signup" class="modal">
+		<div class="modal-content">
+			<h4>Sign up</h4><br />
+			<form id="signup-form">
+				<div class="input-field">
+				<input type="email" id="signup-email" required />
+				<label for="signup-email">Email address</label>
+				</div>
+				<div class="input-field">
+				<input type="password" id="signup-password" required />
+				<label for="signup-password">Choose password</label>
+				</div>
+				<div class="input-field">
+				<input type="text" id="signup-name" required />
+				<label for="signup-name">Name</label>
+				</div>
+				<div class="input-field">
+				<input type="text" id="signup-surname" required />
+				<label for="signup-surname">Surname</label>
+				</div>
+				<div class="input-field">
+				<input type="text" id="signup-age" required />
+				<label for="signup-age">Age</label>
+				</div>
+				<div class="input-field">
+				<input type="text" id="signup-street" required />
+				<label for="signup-street">Street</label>
+				</div>
+				<div class="input-field">
+				<input type="text" id="signup-telephonenumber" required />
+				<label for="signup-telephonenumber">Telephone number</label>
+				</div>
+				<div class="input-field">
+				<input type="text" id="signup-bio" required />
+				<label for="signup-bio">One line bio</label>
+				</div>
+				<button class="btn yellow darken-2 z-depth-0">Sign up</button>
+				<p class="error pink-text center-align"></p>
+			</form>
+			</div>
+		</div>
+		
+		<!-- LOGIN MODAL -->
+		<div id="modal-login" class="modal">
+			<div class="modal-content">
+			<h4>Login</h4><br />
+			<form id="login-form">
+				<div class="input-field">
+				<input type="email" id="login-email" required />
+				<label for="login-email">Email address</label>
+				</div>
+				<div class="input-field">
+				<input type="password" id="login-password" required />
+				<label for="login-password">Your password</label>
+				</div>
+				<button class="btn yellow darken-2 z-depth-0">Login</button>
+				<p class="error pink-text center-align"></p>
+			</form>
+			</div>
+		</div>
+		
+		<!-- ACCOUNT MODAL -->
+		<div id="modal-account" class="modal">
+			<div class="modal-content center-align">
+			<h4>Account details</h4><br/>
+			<div class="account-details"></div>
+			</div>
+		</div>
+
+		
+		<center>
+		<div class="logged-in" style="display:none;">
+		<div class="container white-text">
+		<h1><i><b>Welcome to DOIT!</b></i></h1>
+		</div>
+		</div>
+		</center>
+		<br>
+		<center>
+		<div class="logged-in" style="display:none;">
+		<div class="container white-text">
+		<h2><i><b>Start accomplishing your goals! ;)</b></i></h2>
+		</div>
+		</div>
+		</center>
+
+		<body>
+			<div class="nav-wrapper container">
+			<div class="logged-in" style="display:none;">
+			<div class="cell">
+				<span id="hours">00</span>
+				<span>:</span>
+				<span id="minutes">00</span>
+				<span>:</span>
+				<span id="seconds">00</span>
+				<span id="session">AM</span>
+			</div>	
+		</div>
+	</div>
+		</body>
+
+		<center>
+			<div class="logged-out"style="display:none;">
+			<div class="container white-text">
+			<h1>Login to access DOIT</h1>
+			</div>
+		</center>
+		<br>
+		<center>
+		<div class="logged-out" style="display:none;">
+		<div class="container white-text">
+		<h5>Or <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a> if you don't have an account</h5> 
+		</div>
+		</div>
+		</center>
+
+		<script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-firestore.js"></script>
+		
+		<script>
+			var config = {
+				apiKey: "AIzaSyCXyrXWEpaK3uo7kcwrIDqxfONVVijIR70",
+				authDomain: "doit-10645.firebaseapp.com",
+				databaseURL: "https://doit-10645-default-rtdb.europe-west1.firebasedatabase.app/",
+				projectId: "doit-10645",
+		};
+		firebase.initializeApp(config);
+
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+		</script>
+	<script src="/js/app.js"></script>
+	<script src="/firebase/ui.js"></script>
+	<script src="/js/index.js"></script>
+	<script src="/firebase/auth.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
